@@ -17,7 +17,7 @@ test('get started link', async ({ page }) => {
 
   // check footer is visible
 
-  //await expect(page.getByRole('contentinfo')).toBeVisible();
+  await expect(page.getByRole('contentinfo')).toBeVisible();
 
   // Click the get started link.
   await page.getByRole('link', { name: 'Get started' }).click();
