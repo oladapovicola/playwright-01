@@ -13,7 +13,7 @@ test.only('get started link', async ({ page }) => {
   // check if gitHub icon is visible
     await expect(page.getByRole('link', { name: 'GitHub repository' })).toBeVisible();
 
-    // check footer is visible
+    // check footer is visible.
 
   await expect(page.getByRole('contentinfo')).toBeVisible();
 
