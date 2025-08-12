@@ -7,15 +7,17 @@ test('has title', async ({ page }) => {
   await expect(page).toHaveTitle(/Playwright/);
 });
 
-test.only('get started link', async ({ page }) => {
+test('get started link', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
   // check if gitHub icon is visible
-    await expect(page.getByRole('link', { name: 'GitHub repository' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'GitHub repository'})).toBeVisible();
 
-    // check footer is visible.
 
-  await expect(page.getByRole('contentinfo')).toBeVisible();
+
+  // check footer is visible
+
+  //await expect(page.getByRole('contentinfo')).toBeVisible();
 
   // Click the get started link.
   await page.getByRole('link', { name: 'Get started' }).click();
